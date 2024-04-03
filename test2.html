@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="carousel.css">
+    
+    
+    <title>Southern Metrology & Calibration Services Inc.</title>
+    <style>
+        
+        .navbar {
+            width: 100%;
+          
+            color: #000000; /* Remove margin from the navbar */
+        }
+
+        .navbar-nav .nav-link {
+            color: #0d6efd;
+            border-radius: 40px;
+            padding: 5px 20px; /* Change text color to black */
+            border: 1px;
+            
+        }
+        @media (max-width: 768px) {
+            .nav-link {
+                font-size: 10px;
+            }
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #0d6efd;
+            color: rgb(255, 255, 255);
+        }
+
+        /* Adjust logo size for smaller devices */
+        .navbar-brand img {
+            max-height: 45px;
+        }
+
+        /* Adjust logo size for larger devices */
+        @media (min-width: 1200px) {
+            .navbar-brand img {
+                max-height: 60px;
+                width: auto;
+                /* Ensure the width adjusts proportionally */
+            }
+        }
+        
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+      
+        .title{
+            position: relative; 
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        .title::before {    
+            content: "";
+            background-image: url("bg1.jpg");
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            filter: brightness(50%);
+        }
+        h1 {
+            position: relative;
+            color: #ffffff;  
+            font-size: 40px;
+            line-height: 1.5;
+            text-align: center;
+            border: solid rgba(255, 255, 255, 0.702);
+            padding: 8px;
+        }
+         /* 2nddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
+   
+        .c-item {
+            height: 250px;
+            object-fit: cover;      
+        }
+        .h2 {
+            font-family: arial;
+            color: #000000;
+            padding-top: 5px;
+       
+           
+            /* Default font size */
+        }
+        .t { 
+            font-family: arial;
+            color: #000000;
+        }
+        /* 3rddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
+        .text { 
+            padding: 15px;  
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .text1{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background: linear-gradient(181deg, #020061 15%, #6195db 158.5%);
+            color: rgb(255, 255, 255);
+        }
+        .text2{
+            padding-top: 10px;
+            
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 12px;
+            text-align: justify;
+            
+        }
+
+         /* 4thhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh */
+        .services {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+
+        .services-list {
+            flex: 1;
+            padding-right: 150px;
+            padding-left: 100px;
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        .services-list ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .services-list ul li {
+            margin-bottom: 5px;
+        }
+
+        .services-list ul li:before {
+            content: "•";
+            color: #0d6efd;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .services-img {
+            flex: 1;
+        }
+
+        .services-img img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        .mySlides {
+            display: none;
+            animation: fade 2s; /* Add animation with 2 seconds duration */
+        }
+
+        @keyframes fade {
+            from { opacity: 0; } /* Start with transparency */
+            to { opacity: 1; } /* Fully visible */
+        }
+        .footer{
+            height: 300px;
+            background: linear-gradient(181deg, rgba(97,149,219,1) 0%, rgba(2,0,97,1) 67%);
+            color: white;
+            padding: 20px;
+        }
+        .divs{
+            display: flex;
+        }
+        .address{
+            padding-left: 20px;
+        }
+        .email{
+            padding-left: 20px;
+        }
+        .copyright{
+            text-align: center;
+            font-size: 10px;
+            padding-top: 10px;
+        }
+        .logo{
+            max-height: 40px;
+        }
+
+         /* smalllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll */
+        @media (max-width: 700px) {
+        .title {
+            height: 150px;
+        }
+
+        .title::before {
+            height: auto;
+        }
+
+        h1 {
+            font-size: 10px;
+        }
+        .c-item{
+            height: 150px;
+        }
+        .h2 {
+            font-size: 10px;
+            font-weight: bold;
+        }
+        t {
+            font-size: 7px;   
+        }
+        .text1{
+            height: auto;
+        }
+        .text2{
+            font-size: 7px;
+        }
+
+        .services {
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+
+        .services-list {
+            padding: 0;
+            text-align: center;
+            font-size: 7px;
+        }
+
+        .services-img {
+            order: -1;
+            margin-bottom: 20px;
+            max-width: 400px;
+        }
+
+        .footer {
+            height: auto;
+            padding: 20px;  
+        }
+        .contact,
+        .address,   
+        .email{
+            font-size: 5px;
+        }
+        .con{
+            font-size: 10px;
+        }
+        .logo{
+            max-height: 15px;
+        }
+        .copyright{
+            font-size: 4px;
+        }
+       
+
+      
+     
+    }
+
+      
+            
+
+    
+        
+       
+ </style>
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <img src="logo.png" alt="Logo" class="d-inline-block align-text-top me-2 img-fluid">
+                </a>
+
+                <!-- Navbar Toggler -->
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ms-auto  fw-bold">
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Permits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Accreditation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Policies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Calibration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">PM and Validation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </header>
+
+    <div class="title">
+        <h1>Measure with Confidence, <br>Every Step of the Way</h1>
+        </div>
+
+    <div id="hero-carousel" class="carousel slide bg-light" data-bs-ride="carousel">
+            
+           <!-- slide1 -->
+           <div class="carousel-inner">
+            <div class="carousel-indicators">
+                <button type="button" style="background-color: rgb(0, 0, 0);" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" style="background-color: rgb(0, 0, 0);" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" style="background-color: rgb(0, 0, 0);" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+             <div class="carousel-item active c-item">
+               
+               <div class="carousel-caption top-0 mt-4" >
+                   <h2 class="h2">Mission</h2>
+                   <t class="t">Strive to laboratory excellence and first choice in the Philippines.</t>
+                    
+                 </div>
+             </div>
+    
+    
+    
+            <!-- slide2 --> 
+             <div class="carousel-item c-item">
+               
+               <div class="carousel-caption top-0 mt-4">
+                   <h2 class="h2">Vision</h2>
+                   <t class="t">To be center of excellence and source of references to achieve long-term customers’ satisfaction by providing quality service in a timely manner.</t>
+                                        
+                 </div>
+             </div>
+    
+    
+    
+    
+             <!-- slide3 -->
+             <div class="carousel-item c-item">
+               
+               <div class="carousel-caption top-0 mt-4">
+                   <h2 class="h2">Value</h2>
+                   <t class="t">To serve our customers and associates through continuous improvement with sincerity, honesty and integrity.</t>
+                                   
+                 </div>
+             </div>
+
+           </div>
+           
+        </div>
+        
+    <div class="text1">
+            <p class="text2">
+                Thank you for visiting <strong>Southern Metrology and Calibration Services, Inc.</strong> website.
+            </p>
+            <p class="text2">
+                We, Southern Metrology and Calibration Services, Inc. would like to take this opportunity to show you the services, equipments and facilities that we have. Please take time to browse around for you to know more about the company, our policies and the services we can provide your company. <strong>Southern Metrology and Calibration Services, Inc.</strong> is an <strong>ISO/IEC 17025:2017</strong> accreditted Calibration laboratory.
+                </p>
+    
+            <p class="text2">
+                As experts in <strong>metrology</strong> and <strong>calibration</strong>, we give you, your associates, and customers the confidence that your measurement procedures are always performed in accordance with your quality requirements. Our services also works as a quality label, that your test equipment is calibrated by an independent, qualified laboratory. You can be assured of top-notch performance delivery and professional quality services coming from our customer-focused and knowledgeable staff <strong>(with over twenty (20) years of metrology and calibration application experience)</strong>, and we’ll be responsive to your needs.
+                </p>
+    
+            <p class="text2">
+                <strong>Our state of the art facilities and wide variety of Metrology and Calibration equipment can cater a small, to medium, to large enterprise</strong>. Feel free to contact us any time if you have questions or inquiries. The company is accredited by a number of accreditation bureaus and other government agencies.
+                </p>
+                
+            <p class="text2">
+                <strong>Our metrology and calibration services are performed on-site at your facilities or in our state-of-the-art laboratories</strong>. And as part of our objectives, we implement turnaround time of five (5) to fifteen (15) working days, have the RECALL system, and provide logistics for collection, pick-up and delivery services.
+                </p>
+     
+            <p class="text2">
+                Looking forward to do business with you!
+                </p> 
+    
+            <p class="text2">
+                <strong>Southern Metrology and Calibration Services Management</strong>
+                </p>
+        </div>
+
+    <div class="services">
+            <div class="services-list">
+                <h2 class="h2"><strong>Services Offered</strong></h2>
+                <ul>
+                    <li>Calibration of Measuring Instruments</li>
+                    <li>Training on Metrology, Calibration, ISO/IEC 17025;2017 Awareness, Internal Audit & Management System Related Courses</li>
+                    <li>Proficiency Testing for the Calibration of Measuring Instruments</li>
+                    <li>Biohazard Safety, Laminar Flow Cabinet and Fume Hood Certification</li>
+                    <li>Gaseous Fumigation</li>
+                    <li>Supply and Installation of Activated Carbon Filter and HEPA Filter</li>
+                    <li>Temperature Mapping</li>
+                </ul>
+            </div>
+            
+                <div class="services-img services-content services-section" style="max-height:500px">
+                    <img class="mySlides" src="bg4.jpg" style="height:50%" alt="Services Image">
+                    <img class="mySlides" src="bg5.jpg" style="width:100%" alt="Services Image">
+                    <img class="mySlides" src="bg6.jpg" style="width:100%" alt="Services Image">
+             
+                
+            </div>
+        </div>
+
+    <div class="footer">
+            <h3 class="con">Contact Us
+                <img src="logo.png" alt="Logo" class="logo d-inline-block align-text-top me-2 img-fluid bg-white">
+            </h3>
+            <div class="separator">
+                <div id="separator-5435933ece" class="cmp-separator">
+                    <hr class="cmp-separator__horizontal-rule">
+                </div>
+            </div>
+            <div class="divs">
+            <t class="contact"><strong>Contact Details</strong><br>Sales Department<br>Globe: 0945 408 2266<br>Sun: 0925 503 1523<br>Manila Line: (02) 8533 0162<br>Laguna Line: (049) 511 8177</t>
+            <t class="address"><strong>Office Address</strong><br>	
+                Artica Building, National Highway corner Almazora Street,<br> Canlalay, Biñan City 4024, Laguna, Philippines</t>
+            <t class="email"><strong>Email Address</strong><br>	
+                info@southerncalibration.com<br>southerncalab@gmail.com</t>
+        </div>
+        <div class="separator">
+            <div id="separator-5435933ece" class="cmp-separator">
+                <hr class="cmp-separator__horizontal-rule">
+            </div>
+        </div>
+        <div class="copyright">AN ISO/IEC 17025:2017 ACCREDITED CALIBRATION LABORATORY<br>Copyright ©  2018  All Rights Reserved. Southern Metrology and Calibration Services, Inc.</div>
+        </div>
+    
+   
+    <script>
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 3000); // Change image every 2 seconds
+            }
+        </script>
+
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
