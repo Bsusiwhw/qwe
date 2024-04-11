@@ -10,10 +10,16 @@
     
     <title>Southern Metrology & Calibration Services Inc.</title>
     <style>
-        
+        @font-face {
+        font-family: "GothamBook";
+        src: url("https://irp.cdn-website.com/c2b0e68c/fonts/GothamBook-360_400.ttf");
+        font-weight: 400;
+        font-style: normal;
+        }
+
         .navbar {
             width: 100%;
-          
+            font-family: GothamBook;  
             color: #000000; /* Remove margin from the navbar */
         }
 
@@ -24,12 +30,7 @@
             border: 1px;
             
         }
-        @media (max-width: 768px) {
-            .nav-link {
-                font-size: 10px;
-            }
-        }
-
+       
         .navbar-nav .nav-link:hover {
             background-color: #0d6efd;
             color: rgb(255, 255, 255);
@@ -41,48 +42,68 @@
         }
 
         /* Adjust logo size for larger devices */
-        @media (min-width: 1200px) {
+        @media (min-width: 1021px) {
             .navbar-brand img {
                 max-height: 60px;
                 width: auto;
                 /* Ensure the width adjusts proportionally */
             }
-        }
-        
-        header{
+            header{
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
       
-        .title{
-            position: relative; 
-            height: 80vh;
+                .title {
+            position: relative;
+            height: 60vh;
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-           
         }
-        .title::before {    
-            content: "";
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
             background-image: url("bg1.jpg");
             background-size: cover;
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
             filter: brightness(50%);
         }
+
         h1 {
             position: relative;
-            color: #ffffff;  
+            color: #ffffff;
+            border: solid #fff;  
             font-size: 40px;
-            line-height: 1.5;
             text-align: center;
-            border: solid rgba(255, 255, 255, 0.702);
-            padding: 8px;
+            padding: 10px 20px;
+            font-family: GothamBook;  
+            z-index: 1; /* Ensure the text appears in front of the background */
+        }
+
+        .double-razor::before,
+        .double-razor::after {
+            position: absolute;
+            content: "";
+            width: 310px; /* Adjusted width */
+            height: 10px;
+            box-shadow: 
+                0 -2px 0 rgb(255, 255, 255),
+                0 2px 0 rgb(255, 255, 255);
+            top: 50%;
+            transform: translateY(-100%);
+        }
+
+        .double-razor::before {
+            right: 105%; /* Adjusted right position */
+        }
+
+        .double-razor::after {
+            left: 105%; /* Adjusted left position */
         }
          /* 2nddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
    
@@ -91,8 +112,8 @@
             object-fit: cover; 
              
         }
-        .h2 {
-            font-family: arial;
+        .h {
+            font-family: GothamBook;  
             color: #000000;
             padding-top: 50px;    
        
@@ -100,7 +121,7 @@
             /* Default font size */
         }
         .t { 
-            font-family: arial;
+            font-family: GothamBook;  
             color: #000000;
         }
         /* 3rddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
@@ -122,29 +143,38 @@
             padding-right: 10px;
             font-size: 12px;
             text-align: justify;
-            
+            font-family: GothamBook;  
         }
-
+        
+        
+        
          /* 4thhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh */
         .services {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            padding-bottom: 5px;
-            padding-top: 5px;
+            padding-bottom: 0px;
+            padding-top: 0px;
         }
 
         .services-list {
             flex: 1;
             padding-right: 150px;
             padding-left: 100px;
-            font-size: 15px;
+            font-size: 13.5px;
             text-align: justify;
+            font-family: GothamBook;    
+        }
+        .se{
+            font-size: 30px;
+            font-family: GothamBook; 
+            margin-top: 30px;
         }
 
         .services-list ul {
             list-style-type: none;
             padding-left: 0;
+            
         }
 
         .services-list ul li {
@@ -184,6 +214,7 @@
             background: linear-gradient(181deg, rgba(97,149,219,1) 0%, rgba(2,0,97,1) 67%);
             color: white;
             padding: 20px;
+            font-family: GothamBook;  
         }
         .divs{
             display: flex;
@@ -202,11 +233,183 @@
         .logo{
             max-height: 40px;
         }
+        }
+        
+       
+        
 
          /* smalllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll */
-        @media (max-width: 700px) {
+        @media (max-width: 690px) {
+            header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+      
+        .title{
+            position: relative; 
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        .title::before {    
+            content: "";
+            background-image: url("bg1.jpg");
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            filter: brightness(50%);
+        }
+        h1 {
+            position: relative;
+            color: #ffffff;  
+            font-size: 40px;
+            line-height: 1.5;
+            text-align: center;
+            border: solid rgba(255, 255, 255, 0.702);
+            padding: 8px;
+            font-family: GothamBook;  
+        }
+         /* 2nddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
+   
+        .c-item {
+            height: 250px;
+            object-fit: cover; 
+             
+        }
+        .h {
+            font-family: GothamBook;  
+            color: #000000;
+            padding-top: 50px;    
+       
+           
+            /* Default font size */
+        }
+        .t { 
+            font-family: GothamBook;  
+            color: #000000;
+        }
+        /* 3rddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
+        .text { 
+            padding: 15px;  
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .text1{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background: linear-gradient(181deg, #020061 15%, #6195db 158.5%);
+            color: rgb(255, 255, 255);
+        }
+        .text2{
+            padding-top: 10px;
+            
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 12px;
+            text-align: justify;
+            font-family: GothamBook;  
+        }
+        
+        
+        
+         /* 4thhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh */
+        .services {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 0px;
+            padding-top: 0px;
+        }
+
+        .services-list {
+            flex: 1;
+            padding-right: 150px;
+            padding-left: 100px;
+            font-size: 13.5px;
+            text-align: justify;
+            font-family: GothamBook;    
+        }
+        .se{
+            font-size: 20px;
+            font-family: GothamBook; 
+            margin-top: 30px;
+        }
+
+        .services-list ul {
+            list-style-type: none;
+            padding-left: 0;
+            
+        }
+
+        .services-list ul li {
+            margin-bottom: 5px;
+        }
+
+        .services-list ul li:before {
+            content: "•";
+            color: #0d6efd;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .services-img {
+            flex: 1;
+        }
+
+        .services-img img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        .mySlides {
+            display: none;
+            animation: fade 2s; /* Add animation with 2 seconds duration */
+        }
+
+        @keyframes fade {
+            from { opacity: 0; } /* Start with transparency */
+            to { opacity: 1; } /* Fully visible */
+        }
+        .footer{
+            height: 300px;
+            background: linear-gradient(181deg, rgba(97,149,219,1) 0%, rgba(2,0,97,1) 67%);
+            color: white;
+            padding: 20px;
+            font-family: GothamBook;  
+        }
+        .divs{
+            display: flex;
+        }
+        .address{
+            padding-left: 20px;
+        }
+        .email{
+            padding-left: 20px;
+        }
+        .copyright{
+            text-align: center;
+            font-size: 10px;
+            padding-top: 10px;
+        }
+        .logo{
+            max-height: 40px;
+        }
+        .nav-link {
+            font-size: 10px;
+        }
         .title {
             height: 420px;
+            width: 100%;
         }
 
         .title::before {
@@ -217,12 +420,17 @@
             font-size: 20px;
         }
         .c-item{
-            height: 200px;
+            height: 190px;
         }
         .h2 {
+        
+            font-weight: bold;
+            padding-top: 5px;
+        }
+        .h {
             font-size: 20px;
             font-weight: bold;
-            padding-top: 35px;
+            padding-top: 10px;
         }
         .t {
             font-size: 10px;
@@ -236,7 +444,10 @@
         .text2{
             font-size: 7px;
         }
-
+        .se{
+            font-size: 20px;
+            margin-top: 5px;
+        }
         .services {
             flex-direction: column;
             align-items: center;
@@ -251,18 +462,18 @@
 
         .services-img {
             order: -1;
-            max-width: 400px;
+            width: 100%;
         }
 
         .footer {
-            height: auto;
-            padding: 20px;  
+            height: 185px;
         }
         .contact,
         .address,   
         .email{
             font-size: 5px;
         }
+
         .con{
             font-size: 10px;
         }
@@ -271,19 +482,186 @@
         }
         .copyright{
             font-size: 4px;
+            margin-top: 0px;
         }
-       
+        }
 
+
+         /*mediummmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+         @media (min-width: 700px) and (max-width: 1030px) {
+            .navbar-brand img {
+                max-height: 60px;
+                width: auto;
+                /* Ensure the width adjusts proportionally */
+            }
+            header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+      
+        .title{
+            position: relative; 
+            height: 60vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        .title::before {    
+            content: "";
+            background-image: url("bg1.jpg");
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            filter: brightness(50%);
+        }
+        h1 {
+            position: relative;
+            color: #ffffff;  
+            font-size: 40px;
+            line-height: 1.5;
+            text-align: center;
+            border: solid rgba(255, 255, 255, 0.702);
+            padding: 8px;
+            font-family: GothamBook;  
+        }
+         /* 2nddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
+   
+        .c-item {
+            height: 250px;
+            object-fit: cover; 
+             
+        }
+        .h {
+            font-family: GothamBook;  
+            color: #000000;
+            padding-top: 50px;    
+       
+           
+            /* Default font size */
+        }
+        .t { 
+            font-family: GothamBook;  
+            color: #000000;
+        }
+        /* 3rddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
+        .text { 
+            padding: 15px;  
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .text1{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background: linear-gradient(181deg, #020061 15%, #6195db 158.5%);
+            color: rgb(255, 255, 255);
+        }
+        .text2{
+            padding-top: 10px;
+            
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 12px;
+            text-align: justify;
+            font-family: GothamBook;  
+        }
+        
+        
+        
+         /* 4thhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh */
+        .services {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 0px;
+            padding-top: 0px;
+        }
+
+        .services-list {
+            flex: 1;
+            padding-right: 50px;
+            padding-left: 50px;
+            font-size: 10px;
+            text-align: justify;
+            font-family: GothamBook;    
+        }
+        .se{
+            font-size: 25px;
+            font-family: GothamBook; 
+            margin-top: 10px;
+        }
+
+        .services-list ul {
+            list-style-type: none;
+            padding-left: 0;
+            
+        }
+
+        .services-list ul li {
+            margin-bottom: 5px;
+        }
+
+        .services-list ul li:before {
+            content: "•";
+            color: #0d6efd;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .services-img {
+            flex: 1;
+        }
+
+        .services-img img {
+            padding: 5%;
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        .mySlides {
+            display: none;
+            animation: fade 2s; /* Add animation with 2 seconds duration */
+        }
+
+        @keyframes fade {
+            from { opacity: 0; } /* Start with transparency */
+            to { opacity: 1; } /* Fully visible */
+        }
+        .footer{
+            height: auto;
+            background: linear-gradient(181deg, rgba(97,149,219,1) 0%, rgba(2,0,97,1) 67%);
+            color: white;
+            padding: 20px;
+            font-family: GothamBook;  
+        }
+        .divs{
+            display: flex;
+        }
+        .address{
+            padding-left: 20px;
+        }
+        .email{
+            padding-left: 20px;
+        }
+        .copyright{
+            text-align: center;
+            font-size: 10px;
+            padding-top: 10px;
+        }
+        .logo{
+            max-height: 40px;
+        }
       
      
-    }
-
-      
-            
-
-    
-        
-       
+    } 
  </style>
 
 
@@ -307,7 +685,7 @@
                             <a href="about.html" class="nav-link">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Permits</a>
+                            <a href="https://my-smcs.com/login" class="nav-link">Permits</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">Accreditation</a>
@@ -330,8 +708,9 @@
         </nav>
         </header>
 
-    <div class="title">
-        <h1>Measure with Confidence, <br>Every Step of the Way</h1>
+        <div class="title">
+            <div class="background-image"></div>
+            <h1 class="divider line double-razor"><strong>Measure with confidence,<br> Every Step of the Way</strong></h1>
         </div>
 
     <div id="hero-carousel" class="carousel slide bg-light" data-bs-ride="carousel">
@@ -346,7 +725,7 @@
              <div class="carousel-item active c-item">
                
                <div class="carousel-caption top-0" >
-                   <h2 class="h2">Mission</h2>
+                   <h2 class="h">Mission</h2>
                    <t class="t">Strive to laboratory excellence and first choice in the Philippines.</t>
                     
                  </div>
@@ -358,7 +737,7 @@
              <div class="carousel-item c-item">
                
                <div class="carousel-caption top-0">
-                   <h2 class="h2">Vision</h2>
+                   <h2 class="h">Vision</h2>
                    <t class="t">To be center of excellence and source of references to achieve long-term customers’ satisfaction by providing quality service in a timely manner.</t>
                                         
                  </div>
@@ -371,14 +750,12 @@
              <div class="carousel-item c-item">
                
                <div class="carousel-caption top-0">
-                   <h2 class="h2">Value</h2>
+                   <h2 class="h">Value</h2>
                    <t class="t">To serve our customers and associates through continuous improvement with sincerity, honesty and integrity.</t>
                                    
                  </div>
              </div>
-
-           </div>
-           
+           </div> 
         </div>
         
     <div class="text1">
@@ -410,10 +787,10 @@
 
     <div class="services">
             <div class="services-list">
-                <h2 class="h2"><strong>Services Offered</strong></h2>
+                <h2 class="se"><strong>Services Offered</strong></h2>
                 <ul>
                     <li>Calibration of Measuring Instruments</li>
-                    <li>Training on Metrology, Calibration, ISO/IEC 17025;2017 Awareness, <br>Internal Audit & Management System Related Courses</li>
+                    <li>Training on Metrology, Calibration, ISO/IEC 17025;2017 Awareness, Internal Audit & Management System Related Courses</li>
                     <li>Proficiency Testing for the Calibration of Measuring Instruments</li>
                     <li>Biohazard Safety, Laminar Flow Cabinet and Fume Hood Certification</li>
                     <li>Gaseous Fumigation</li>
